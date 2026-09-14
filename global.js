@@ -9,4 +9,6 @@ require('bare-stream/global')
 require('bare-worker/global')
 require('bare-ws/global')
 
-process.versions.node = '20.0.0' // Compatibility target
+// Compatibility target: the current Node.js LTS line. Bare checks this value
+// against `engines.node` when resolving packages, so bump it as LTS lines move.
+process.versions.node = '24.21.0'
